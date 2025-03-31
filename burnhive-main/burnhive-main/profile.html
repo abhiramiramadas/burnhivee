@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | BurnHive</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="burnhive-logo">
+        <svg
+          class="flame-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C10.5 4 8.5 5.5 6 7C3.5 8.5 2.5 11.5 2.5 14C2.5 17.5 4 20.5 8 22C6.5 20 6 17 6 14.5C9 16.5 10 19 10 22C15.5 22 21.5 17.5 21.5 11C21.5 7.5 19.5 4.5 17 3C16 6 14 7.5 12 9C11.5 5.5 12 3.5 12 2Z"
+            fill="white"
+          />
+        </svg>
+        <span>BurnHive</span>
+      </a>
+      <button id="logout" class="logout-btn">Logout</button>
+    </header>
+
+    <main class="profile-container">
+      <!-- Loading Skeleton -->
+      <div id="loading-skeleton" class="loading-skeleton">
+        <div class="skeleton skeleton-image"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text" style="width: 150px"></div>
+      </div>
+
+      <!-- Profile Card -->
+      <div id="profile-card" class="profile-card" style="display: none">
+        <img
+          src="assets/default-profile.png"
+          alt="Profile Picture"
+          class="profile-image"
+          id="profileImage"
+        />
+        <h1 id="username">Welcome, User!</h1>
+        <p class="profile-email" id="email">Loading user details...</p>
+
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-value" id="stat-activities">0</span>
+            <span class="stat-label">Activities</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-calories">0</span>
+            <span class="stat-label">Calories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-workouts">0</span>
+            <span class="stat-label">Workouts</span>
+          </div>
+        </div>
+
+        <button id="editProfile" class="action-btn edit-profile-btn">
+          Edit Profile
+        </button>
+      </div>
+    </main>
+
+    <script src="profile.js"></script>
+  </body>
+</html>
